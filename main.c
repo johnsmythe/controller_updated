@@ -7,7 +7,7 @@
 //TODO: maybe get the number from the arm message instead of hard coding it?, in a more
 //sophisticated system, you would have an onboard chip that stores the number and you just read it
 
-char mikesnumber[] = "+16472006075";
+char mikesnumber[] = "+12345645";
 
 //these are the armed coordinates
 char longitude[20];
