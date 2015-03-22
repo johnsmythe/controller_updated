@@ -31,9 +31,9 @@ int main(void) {
     __bis_SR_register(LPM0_bits + GIE);       // Enter LPM0, interrupts enabled
 
     while( 1 ){
-    	//main event loop, check for text messages;
-    	printf("sleep for 10 seconds\n");
-    	__delay_cycles(10000000);
+		//main event loop, check for text messages;
+		printf("sleep for 10 seconds\n");
+		__delay_cycles(10000000);
     	if( notify ){
 			char textmsg[100];
 			setInitialGPSstate();

@@ -96,9 +96,7 @@ void clear_buf(){
 void uart_send_string( const char * command ){
 	do{
 		clear_buf();
-		enable_UCA0_interrupt();	//redundant perhaps? maybe just raise rts even though uca0 has interrupts,
-									//you still wont see anything? but the multitech guys said that rts flag is not
-									//very fast acting so do this as a precaution
+		enable_UCA0_interrupt();
 		P3OUT |= 0x40;	//disable rts to not interrupt transmission
 		while( *command != '\0' ){
 			while (!(UCA0IFG & UCTXIFG));
